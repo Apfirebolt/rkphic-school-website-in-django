@@ -1,1 +1,1 @@
-web: gunicorn digifix_computer_repair.wsgi
+web: gunicorn rkphic_school.wsgi
