@@ -78,25 +78,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'rkphic_school.wsgi.application'
 
-
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-database_name = os.environ.get("NAME")
-username = os.environ.get("USERNAME")
-password = os.environ.get("PASSWORD")
-host = os.environ.get("HOST")
-
 DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-       'NAME': database_name,
-       'USER': username,
-       'PASSWORD': password,
-       'HOST': host,
-       'PORT': '5432'
-   }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rkphic',
+        'USER': 'postgres',
+        'PASSWORD': 'pass12345',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '5432',
+    }
 }
 
 
