@@ -1,3 +1,3 @@
-$(document).ready(function() {
-    console.log('Jquery ready')
+$(document).ready(function(){
+ console.log('Hello Jquery')
 });
