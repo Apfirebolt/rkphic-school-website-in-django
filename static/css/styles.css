@@ -90,7 +90,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 100px;
+  max-width: 150px;
 }
 
 #main {
@@ -319,6 +320,10 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   left: 0;
   right: 0;
+}
+.carousel-container img {
+  max-height: 500px;
+  max-width: 1000px;
 }
 #hero h2 {
   color: #fff;
