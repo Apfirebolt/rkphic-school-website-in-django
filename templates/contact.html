@@ -1,7 +1,7 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 {% block title %}
-    Contact Page
+    RKPHIC - Nagal, Saharanpur - Contact Us
 {% endblock %}
 
 {% block content %}
@@ -16,12 +16,8 @@
     <section class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
           <h2>Contact</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
-          </ol>
         </div>
 
       </div>
@@ -43,20 +39,18 @@
                     G.T.Road, Nagal, Saharanpur<br>
                     Uttar Pradesh, India
                   </p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>jagpalduttaswami001@gmail.com (Principal Sir)</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
-                  <p>+91-9897836385 (Jagpal Dutta Swami Sir)</p>
+                  <div class="row my-3">
+                    <div class="col-md-6">
+                      <i class="bx bx-envelope"></i>
+                      <h3>Email Us</h3>
+                      <p>jagpalduttaswami001@gmail.com (Principal Sir)</p>
+                    </div>
+                    <div class="col-md-6">
+                      <i class="bx bx-phone-call"></i>
+                      <h3>Call Us</h3>
+                      <p>+91-9897836385 (Jagpal Dutta Swami Sir)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,12 +73,7 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center my-3"><button type="submit">Send Message</button></div>
             </form>
           </div>
         </div>
