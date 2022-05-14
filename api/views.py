@@ -1,4 +1,4 @@
-from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
+from rest_framework.generics import ListAPIView, ListCreateAPIView, CreateAPIView, UpdateAPIView, DestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
 from api.serializers import CustomUserSerializer, NotificationSerializer, ContactMessagesSerializer
@@ -22,7 +22,7 @@ class ChangeSettingsApiView(UpdateAPIView):
         return obj
 
 
-class GetContactMessages(ListAPIView):
+class GetCreateContactMessages(ListCreateAPIView):
     serializer_class = ContactMessagesSerializer
     queryset = ContactMessages.objects.all()
 
