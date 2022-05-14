@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from accounts.models import CustomUser
+from api.models import Notifications, ContactMessages
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
@@ -14,6 +15,21 @@ class CustomUserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
+
+
+class NotificationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Notifications
+        fields = '__all__'
+
+
+class ContactMessagesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ContactMessages
+        fields = '__all__'
+
 
 
 
