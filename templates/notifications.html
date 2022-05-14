@@ -1,7 +1,7 @@
 {% extends 'partials/base.html' %}
 {% load static %}
 {% block title %}
-    Courses Page
+    RKPHIC - Nagal, Saharanpur - Notifications
 {% endblock %}
 
 {% block content %}
@@ -11,12 +11,8 @@
     <section class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Notifications Page</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Notifications Page</li>
-          </ol>
+        <div class="d-flex justify-content-center align-items-center">
+          <h2>Notifications</h2>
         </div>
 
       </div>
@@ -34,9 +30,7 @@
               <h3>{{ notification.title }}</h3>
               <h4>{{ notification.subtitle }}</h4>
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 {{ notification.content }}
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
             <!-- If object_list is empty  -->
