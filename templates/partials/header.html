@@ -10,16 +10,16 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active " href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About Us</a></li>
-          <li><a href="{% url 'notifications' %}">Notifications</a></li>
-          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a class="{% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+          <li><a class="{% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About Us</a></li>
+          <li><a class="{% if url_name == 'notifications' %}active{% endif %}" href="{% url 'notifications' %}">Notifications</a></li>
+          <li><a class="{% if url_name == 'gallery' %}active{% endif %}" href="{% url 'gallery' %}">Gallery</a></li>
           <li class="dropdown"><a href="{% url 'courses' %}"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Course 1</a></li>
-              <li class="dropdown"><a href="#"><span>Course 1</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="#"><span>Course 2</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Course 2</a></li>
+                  <li><a href="#">Nested Course 2</a></li>
                 </ul>
               </li>
 
