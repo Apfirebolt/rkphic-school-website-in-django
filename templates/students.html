@@ -1,0 +1,44 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block title %}
+    RKPHIC - Nagal, Saharanpur - Students
+{% endblock %}
+
+{% block content %}
+    <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-center align-items-center">
+          <h2>Students</h2>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <section class="testimonials" data-aos="fade-up">
+      <div class="container">
+
+        <div class="testimonials-carousel swiper">
+          <div class="swiper-wrapper">
+
+            {% for student in students %}
+            <div class="testimonial-item swiper-slide">
+              <img src={{ student.image.url }} class="testimonial-img" alt="">
+              <h3>{{ student.first_name }}</h3>
+              <h4>{{ student.last_name }}</h4>
+            </div>
+            <!-- If object_list is empty  -->
+            {% empty %}
+            <li>No Students added.</li>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

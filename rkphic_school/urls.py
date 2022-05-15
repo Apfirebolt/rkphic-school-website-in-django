@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from rkphic_school import settings
 from django.views.generic import TemplateView
-from rkphic_school.views import NotificationListView
+from rkphic_school.views import NotificationListView, StudentListView
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('gallery', TemplateView.as_view(template_name='gallery.html'), name='gallery'),
     path('courses', TemplateView.as_view(template_name='courses.html'), name='courses'),
     path('notifications', NotificationListView.as_view(), name='notifications'),
+    path('students', StudentListView.as_view(), name='students'),
     path('admin/', admin.site.urls),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('api/', include(('api.urls', 'api'), namespace='api')),
