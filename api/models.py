@@ -28,6 +28,36 @@ class Notifications(models.Model):
         verbose_name_plural = "Notifications"
 
 
+class Student(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    father_name = models.CharField(max_length=200)
+    image = models.ImageField(null=True, blank=True,
+                              default='/placeholder.png')
+    createdAt = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
+    class Meta:
+        verbose_name_plural = "Students"
+
+
+class Gallery(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True,
+                              default='/placeholder.png')
+    createdAt = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "Gallery"
+
+
+
 
 
 
