@@ -8,6 +8,8 @@ from rkphic_school.views import NotificationListView, StudentListView
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('about', TemplateView.as_view(template_name='about.html'), name='about'),
+    path('about/director-message', TemplateView.as_view(template_name='director-message.html'), name='director-message'),
+    path('about/admissions', TemplateView.as_view(template_name='admissions.html'), name='admissions'),
     path('contact', TemplateView.as_view(template_name='contact.html'), name='contact'),
     path('gallery', TemplateView.as_view(template_name='gallery.html'), name='gallery'),
     path('courses', TemplateView.as_view(template_name='courses.html'), name='courses'),
