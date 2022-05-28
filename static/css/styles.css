@@ -82,12 +82,25 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 100px;
-  max-width: 150px;
+  max-height: 120px;
+  max-width: 180px;
 }
 
-#main {
-  margin-top: 80px;
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #header {
+    height: 100px;
+  }
+
+  #main {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #main {
+    margin-top: 80px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -135,7 +148,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: calc(100% + 30px);
   margin: 0;
   padding: 10px 0;
-  z-index: 99;
+  z-index: 100000;
   opacity: 0;
   visibility: hidden;
   background: #fff;

@@ -4,9 +4,9 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo d-flex justify-content-center align-items-center">
-          <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="Poster 3" class="img-fluid"></a>
+          <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="Poster 3" class="img-fluid" height="200" width="200"></a>
           <div>
-            <h1 class="text-light d-none d-xl-block"><a href="index.html"><span>RKPHIC, Saharanpur</span></a></h1>
+            <h1 class="text-light d-none d-xl-block"><a href="index.html"><span>RKPHIC, Nagal, Saharanpur</span></a></h1>
             <h4 class="text-light">
               Ram Krishna Paramhans Inter College
             </h4>
@@ -16,7 +16,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="{% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
-          <li><a class="{% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About Us</a></li>
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'admissions' %}">Admissions</a></li>
+              <li><a href="{% url 'director-message' %}">Director's Message</a></li>
+            </ul>
+          </li>
           <li><a class="{% if url_name == 'notifications' %}active{% endif %}" href="{% url 'notifications' %}">Notifications</a></li>
           <li><a class="{% if url_name == 'gallery' %}active{% endif %}" href="{% url 'gallery' %}">Gallery</a></li>
           <li class="dropdown"><a href="{% url 'courses' %}"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
