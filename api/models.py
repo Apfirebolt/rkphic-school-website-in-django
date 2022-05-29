@@ -1,6 +1,12 @@
 from django.db import models
 from rkphic_school.settings import AUTH_USER_MODEL
 
+GALLERY_TAG_CHOICES = (
+    ("custom", "custom"),
+    ("event", "event"),
+    ("student", "student"),
+)
+
 
 class ContactMessages(models.Model):
     sender_name = models.CharField("Sender Name", max_length=200)
@@ -46,6 +52,7 @@ class Student(models.Model):
 class Gallery(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
+    tag = models.CharField(max_length=150, choices=GALLERY_TAG_CHOICES, default="custom", null=True, blank=True)
     image = models.ImageField(null=True, blank=True,
                               default='/placeholder.png')
     createdAt = models.DateTimeField(auto_now_add=True)

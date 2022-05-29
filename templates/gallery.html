@@ -25,86 +25,24 @@
             <ul id="gallery-filters">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-custom">Custom</li>
-              <li data-filter=".filter-topper">Toppers</li>
+              <li data-filter=".filter-student">Students</li>
               <li data-filter=".filter-event">Events</li>
             </ul>
           </div>
         </div>
 
       <div class="gallery-container row">
-          <div class="gallery-item filter-custom col-md-4">
-              <a href="{% static 'images/student1.jpeg' %}" data-gall="portfolioGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/student1.jpeg' %}" alt="Student 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-          <div class="gallery-item filter-topper col-md-4">
-              <a href="{% static 'images/student2.jpeg' %}" data-gall="portfolioGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/student2.jpeg' %}" alt="Student 2">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-          <div class="gallery-item filter-event col-md-4">
-              <a href="{% static 'images/student3.jpeg' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/student3.jpeg' %}" alt="Student 3">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-event col-md-4">
-              <a href="{% static 'images/student4.jpeg' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/student4.jpeg' %}" alt="Student 3">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-          <div class="gallery-item filter-custom col-md-4">
-              <a href="{% static 'images/gallery_1.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_1.JPG' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-custom col-md-4">
-              <a href="{% static 'images/gallery_2.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_2.JPG' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-custom col-md-4">
-              <a href="{% static 'images/gallery_3.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_3.JPG' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-custom col-md-4">
-              <a href="{% static 'images/gallery_4.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_4.JPG' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-topper col-md-4">
-              <a href="{% static 'images/gallery_5.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_5.JPG' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-topper col-md-4">
-              <a href="{% static 'images/gallery_6.jpeg' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_6.jpeg' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
-
-          <div class="gallery-item filter-topper col-md-4">
-              <a href="{% static 'images/gallery_7.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
-                  <img src="{% static 'images/gallery_7.JPG' %}" alt="Gallery 1">
-                  <p class="description">Voluptatum deleniti</p>
-              </a>
-          </div>
+          {% for item in gallery %}
+            <div class="gallery-item col-md-4
+              {% if item.tag == 'custom' %}filter-custom
+              {% elif item.tag == 'student' %}filter-student
+              {% else %}filter-event{% endif %}">
+                <a href={{ item.image.url }} data-gall="gallery" class="glightbox" title={{ item.title }}>
+                  <img src={{ item.image.url }} alt="Image not available">
+                  <p class="description">{{ item.description }}</p>
+                </a>
+            </div>
+            {% endfor %}
         </div>
     </section>
   </main><!-- End #main -->

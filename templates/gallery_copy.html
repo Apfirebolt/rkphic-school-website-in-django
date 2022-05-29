@@ -1,0 +1,111 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block title %}
+    RKPHIC - Nagal, Saharanpur - Gallery
+{% endblock %}
+
+{% block content %}
+    <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-center align-items-center">
+          <h2>Gallery</h2>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section class="gallery" data-aos="fade-up" data-aos-delay="150">
+      <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="gallery-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-custom">Custom</li>
+              <li data-filter=".filter-topper">Toppers</li>
+              <li data-filter=".filter-event">Events</li>
+            </ul>
+          </div>
+        </div>
+
+      <div class="gallery-container row">
+          <div class="gallery-item filter-custom col-md-4">
+              <a href="{% static 'images/student1.jpeg' %}" data-gall="portfolioGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/student1.jpeg' %}" alt="Student 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+          <div class="gallery-item filter-topper col-md-4">
+              <a href="{% static 'images/student2.jpeg' %}" data-gall="portfolioGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/student2.jpeg' %}" alt="Student 2">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+          <div class="gallery-item filter-event col-md-4">
+              <a href="{% static 'images/student3.jpeg' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/student3.jpeg' %}" alt="Student 3">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-event col-md-4">
+              <a href="{% static 'images/student4.jpeg' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/student4.jpeg' %}" alt="Student 3">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+          <div class="gallery-item filter-custom col-md-4">
+              <a href="{% static 'images/gallery_1.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_1.JPG' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-custom col-md-4">
+              <a href="{% static 'images/gallery_2.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_2.JPG' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-custom col-md-4">
+              <a href="{% static 'images/gallery_3.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_3.JPG' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-custom col-md-4">
+              <a href="{% static 'images/gallery_4.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_4.JPG' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-topper col-md-4">
+              <a href="{% static 'images/gallery_5.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_5.JPG' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-topper col-md-4">
+              <a href="{% static 'images/gallery_6.jpeg' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_6.jpeg' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+
+          <div class="gallery-item filter-topper col-md-4">
+              <a href="{% static 'images/gallery_7.JPG' %}" data-gall="studentGallery" class="glightbox" title="Web 3">
+                  <img src="{% static 'images/gallery_7.JPG' %}" alt="Gallery 1">
+                  <p class="description">Voluptatum deleniti</p>
+              </a>
+          </div>
+        </div>
+    </section>
+  </main><!-- End #main -->
+{% endblock %}
