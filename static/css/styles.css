@@ -1161,3 +1161,20 @@ section {
   margin: auto 0.75rem;
   transition: all 0.3s ease-in-out;
 }
+
+.gallery-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.gallery-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.gallery-links a:hover {
+  color: #e96b56;
+}
