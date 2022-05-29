@@ -20,58 +20,63 @@
 
     <!-- ======= Gallery Section ======= -->
     <section class="gallery">
-      <div class="container">
+      <div class="row" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="gallery-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-custom">Custom</li>
+              <li data-filter=".filter-topper">Toppers</li>
+              <li data-filter=".filter-event">Events</li>
+            </ul>
+          </div>
+        </div>
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+      <div class="gallery-container row">
+          <div class="gallery-item filter-custom col-md-4">
             <img src="{% static 'images/student1.jpeg' %}" alt="Student 1">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-down" data-aos-delay="100">
+          <div class="gallery-item filter-topper col-md-4">
             <img src="{% static 'images/student2.jpeg' %}" alt="Student 2">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="gallery-item filter-event col-md-4">
             <img src="{% static 'images/student3.jpeg' %}" alt="Student 3">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="200">
+          <div class="gallery-item filter-event col-md-4">
             <img src="{% static 'images/student4.jpeg' %}" alt="Student 4">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up-right">
-            <img src="{% static 'images/gallery_1.JPG' %}" alt="Student 1">
+          <div class="gallery-item filter-custom col-md-4">
+            <img src="{% static 'images/gallery_1.JPG' %}" alt="Gallery 1">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up-left" data-aos-delay="100">
-            <img src="{% static 'images/gallery_2.JPG' %}" alt="Student 2">
+          <div class="gallery-item filter-custom col-md-4">
+            <img src="{% static 'images/gallery_2.JPG' %}" alt="Gallery 2">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-down-left" data-aos-delay="200">
-            <img src="{% static 'images/gallery_3.JPG' %}" alt="Student 3">
+          <div class="gallery-item filter-custom col-md-4">
+            <img src="{% static 'images/gallery_3.JPG' %}" alt="Gallery 3">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-down-right" data-aos-delay="200">
-            <img src="{% static 'images/gallery_4.JPG' %}" alt="Student 3">
+          <div class="gallery-item filter-custom col-md-4">
+            <img src="{% static 'images/gallery_4.JPG' %}" alt="Gallery 4">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
-            <img src="{% static 'images/gallery_5.JPG' %}" alt="Student 3">
+          <div class="gallery-item filter-topper col-md-4">
+            <img src="{% static 'images/gallery_5.JPG' %}" alt="Gallery 5">
             <p class="description">Voluptatum deleniti</p>
           </div>
-
+          <div class="gallery-item filter-topper col-md-4">
+            <img src="{% static 'images/gallery_6.jpeg' %}" alt="Gallery 6">
+            <p class="description">Voluptatum deleniti</p>
+          </div>
+          <div class="gallery-item filter-topper col-md-4">
+            <img src="{% static 'images/gallery_7.JPG' %}" alt="Gallery 7">
+            <p class="description">Voluptatum deleniti</p>
+          </div>
         </div>
-
-      </div>
-    </section><!-- End Gallery Section -->
-
+    </section>
   </main><!-- End #main -->
 {% endblock %}

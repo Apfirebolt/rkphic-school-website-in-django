@@ -122,23 +122,6 @@
   }, true)
 
   /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
-  /**
    * Testimonials slider
    */
   new Swiper('.testimonials-carousel', {
@@ -159,26 +142,26 @@
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-wrap',
+    let galleryContainer = select('.gallery-container');
+    if (galleryContainer) {
+      let galleryIsotope = new Isotope(galleryContainer, {
+        itemSelector: '.gallery-item',
         layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let galleryFilters = select('#gallery-filters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#gallery-filters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        galleryFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
+        galleryIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        galleryIsotope.on('arrangeComplete', function() {
           AOS.refresh()
         });
       }, true);
@@ -187,16 +170,16 @@
   });
 
   /**
-   * Initiate portfolio lightbox
+   * Initiate gallery lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+  const galleryLightbox = GLightbox({
+    selector: '.gallery-lightbox'
   });
 
   /**
-   * Portfolio details slider
+   * Gallery details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.gallery-details-slider', {
     speed: 400,
     autoplay: {
       delay: 5000,
