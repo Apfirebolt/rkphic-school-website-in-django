@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from accounts.models import CustomUser
 from api.models import Notifications, ContactMessages
+from core.models import Student, Teacher
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
@@ -29,6 +30,46 @@ class ContactMessagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactMessages
         fields = '__all__'
+
+
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Student
+        fields = [
+            'first_name',
+            'last_name',
+            'age',
+            'email',
+            'phone_number',
+            'address',
+            'roll_number',
+            'enrollment_date',
+            'current_class',
+            'guardian_name',
+            'guardian_contact',
+            'guardian_relationship',
+            'emergency_contact'
+        ]
+
+class TeacherSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Teacher
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'phone_number',
+            'address',
+            'hire_date',
+            'salary',
+            'subject',
+        ]
+        read_only_fields = ['hire_date']
+        extra_kwargs = {
+            'salary': {'required': True},
+            'subject': {'required': True},
+        }
 
 
 
