@@ -98,6 +98,18 @@ DATABASES = {
     }
 }
 
+# Hardcoded Database Configuration for Docker Compose
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "django_school",
+#         "USER": "postgres",
+#         "PASSWORD": "pass123",
+#         "HOST": "db",   # IMPORTANT: Use the service name of your database container
+#         "PORT": "5432",
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
